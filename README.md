@@ -1,77 +1,78 @@
-# 🧠 Disease Prediction from Medical Data
+# 🏦 Credit Scoring Model
 
-**Author**: Shiva Teja
-
-This project applies machine learning classification algorithms to predict the likelihood of diseases using structured medical datasets such as Heart Disease, Diabetes, and Breast Cancer, sourced from the UCI Machine Learning Repository.
-
-## 🎯 Objective
-Predict the presence or absence of diseases based on patient data such as symptoms, age, and test results using multiple classification techniques.
-
-## 🛠️ Features
-- Input data includes structured features like:
-  - Age, Symptoms
-  - Blood test results
-  - Medical history
-- Machine learning models used:
-  - Support Vector Machine (SVM)
-  - Logistic Regression
-  - Random Forest
-  - XGBoost
-
-## 📁 Datasets Used
-All datasets are publicly available from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/):
-- Heart Disease Dataset
-- Diabetes Dataset (PIMA Indian Diabetes)
-- Breast Cancer Wisconsin (Diagnostic)
-
-Place these datasets inside the `data/` folder:
-```
-data/
-├── heart.csv
-├── diabetes.csv
-└── breast_cancer.csv
-```
-
-## 📦 Dependencies
-Install the required Python libraries using:
-
-```bash
-pip install -r requirements.txt
-```
-
-Dependencies include:
-- `pandas`
-- `scikit-learn`
-- `xgboost`
-
-## 🚀 How to Run
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/disease-prediction.git
-   cd disease-prediction
-   ```
-
-2. Place the datasets in the `data/` folder as shown above.
-
-3. Run the main script:
-   ```bash
-   python main.py
-   ```
-
-4. Edit `main.py` to choose the dataset:
-   ```python
-   dataset = "heart"  # or "diabetes", or "breast_cancer"
-   ```
-
-## 📊 Output
-Each model prints the accuracy score for the selected dataset after training and testing.
-
-## 📚 References
-- [UCI ML Repository – Heart Disease](https://archive.ics.uci.edu/ml/datasets/Heart+Disease)
-- [UCI ML Repository – Diabetes](https://archive.ics.uci.edu/ml/datasets/pima+indians+diabetes)
-- [UCI ML Repository – Breast Cancer](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic))
+A **Credit Scoring Model** is a predictive analytics solution that assesses an individual's likelihood of repaying debts based on historical financial data. Financial institutions use these models to make informed decisions about loan approvals, credit limits, and interest rates. By analyzing factors like income, debt levels, and payment history, the model categorizes individuals as high or low credit risks.
 
 ---
 
-> by **Shiva Teja**
+## 🎯 Objective
+The objective of this project is to build a machine learning model that predicts an individual's **creditworthiness** (Good Credit / Bad Credit) using classification algorithms. The model will help in automating credit risk assessment, reducing manual intervention, and improving decision accuracy for financial services.
+
+---
+## 🛠️ Features
+- 📊 **Feature Engineering** from financial history (Income, Debts, Payment History, Credit Utilization).
+- 🤖 **Classification Models**:
+  - Logistic Regression
+  - Decision Tree Classifier
+  - Random Forest Classifier
+- 🧪 **Model Evaluation Metrics**:
+  - Precision, Recall, F1-Score
+  - ROC-AUC Score
+
+---
+
+## 📂 Dataset
+The dataset includes the following features:
+- **Income** — Annual income of the individual.
+- **Debt** — Total existing debts.
+- **Payment_History** — Categorical (Good / Average / Poor).
+- **Credit_Utilization** — Percentage of credit used.
+- **Default_Status** — Target variable (0: Good Credit, 1: Bad Credit).
+
+📁 Location: `data/credit_data.csv`
+
+---
+
+## 🚀 How to Run
+
+### 1️⃣ Clone the Repository:
+```bash
+git clone https://github.com/your-username/Credit-Scoring-Model.git
+cd Credit-Scoring-Model
+2️⃣ Install Dependencies:
+bash
+Copy
+Edit
+pip install -r requirements.txt
+3️⃣ Run Exploratory Data Analysis (EDA):
+Open Jupyter Notebook and run:
+
+bash
+Copy
+Edit
+jupyter notebook notebooks/EDA_FeatureEngineering.ipynb
+4️⃣ Train Models and Evaluate:
+bash
+Copy
+Edit
+python src/model_training.py
+📈 Output
+After running model_training.py, you will get:
+
+Classification Report for each model (Precision, Recall, F1-Score).
+
+ROC-AUC Score.
+
+Results will be displayed in the console and saved to:
+
+outputs/model_performance_report.txt
+
+🔗 References
+Scikit-learn Documentation: https://scikit-learn.org/
+
+Dataset Structure: Synthetic dataset created for demo purposes.
+
+Machine Learning Concepts: Precision, Recall, F1-Score, ROC-AUC.
+
+📝 Author
+Shiva Teja
+
