@@ -1,3 +1,5 @@
+Disease Prediction From Medical Data
+
 📁 Project Structure
 
 disease-prediction/
@@ -19,86 +21,6 @@ disease-prediction/
 ├── main.py
 ├── requirements.txt
 └── README.md
-
-
----
-
-🧠 Example: main.py
-
-from models.svm_model import run_svm
-from models.logistic_regression import run_logistic
-from models.random_forest import run_rf
-from models.xgboost_model import run_xgboost
-
-# Choose dataset (heart, diabetes, breast cancer)
-dataset = "heart"  # change as needed
-
-print("\nRunning SVM:")
-run_svm(dataset)
-
-print("\nRunning Logistic Regression:")
-run_logistic(dataset)
-
-print("\nRunning Random Forest:")
-run_rf(dataset)
-
-print("\nRunning XGBoost:")
-run_xgboost(dataset)
-
-
----
-
-🧪 Sample Model Script: models/svm_model.py
-
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.svm import SVC
-from sklearn.metrics import accuracy_score
-from utils.preprocessing import load_and_prepare_data
-
-def run_svm(dataset_name):
-    X, y = load_and_prepare_data(dataset_name)
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-    
-    model = SVC(kernel='linear')
-    model.fit(X_train, y_train)
-    preds = model.predict(X_test)
-
-    print(f"SVM Accuracy on {dataset_name} data: {accuracy_score(y_test, preds):.2f}")
-
-
----
-
-🔧 Utility: utils/preprocessing.py
-
-import pandas as pd
-
-def load_and_prepare_data(dataset_name):
-    if dataset_name == "heart":
-        df = pd.read_csv("data/heart.csv")
-        X = df.drop("target", axis=1)
-        y = df["target"]
-    elif dataset_name == "diabetes":
-        df = pd.read_csv("data/diabetes.csv")
-        X = df.drop("Outcome", axis=1)
-        y = df["Outcome"]
-    elif dataset_name == "breast_cancer":
-        df = pd.read_csv("data/breast_cancer.csv")
-        X = df.drop("diagnosis", axis=1)
-        y = df["diagnosis"].map({"M": 1, "B": 0})
-    else:
-        raise ValueError("Invalid dataset name")
-    return X, y
-
-
----
-
-📦 requirements.txt
-
-pandas
-scikit-learn
-xgboost
-
 
 ---
 
@@ -131,6 +53,19 @@ python main.py
 
 3. Edit main.py to switch datasets.
 
+-----
+
+🧪 Technologies Used
+
+Category	Technology
+
+Programming Language	Python 3
+Data Handling	Pandas
+Machine Learning	scikit-learn, XGBoost
+Algorithms	SVM, Logistic Regression, Random Forest, XGBoost
+Data Source	UCI Machine Learning Repository
+Development Environment	Jupyter Notebook / VS Code / Google Colab
+Version Control	Git & GitHub
 
 
 📊 Output
