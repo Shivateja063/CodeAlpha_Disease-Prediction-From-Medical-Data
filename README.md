@@ -1,103 +1,93 @@
-Disease Prediction From Medical Data
+# 🧠 Disease Prediction from Medical Data
+
+A machine learning-based project that predicts the possibility of diseases such as Heart Disease, Diabetes, and Breast Cancer using structured patient data. Built using Python and classification algorithms like SVM, Logistic Regression, Random Forest, and XGBoost on datasets from the UCI Machine Learning Repository.
+
+---
+
+## 📋 Features
+
+- Predicts three types of diseases:
+  - Heart Disease
+  - Diabetes
+  - Breast Cancer
+- Uses real patient data from UCI Repository
+- Multiple ML models with comparison
+- Clean and modular code structure
+- Easily switch between datasets and models
+- Command-line runnable script
+
+---
+
+## 🛠️ Technologies Used
+
+- **Python** – Core programming language
+- **Pandas** – Data manipulation
+- **Scikit-learn** – Machine learning models (SVM, Logistic Regression, Random Forest)
+- **XGBoost** – Advanced boosting classifier
+- **Jupyter / Google Colab / VS Code** – Development environments
+
+---
+
+## 🚀 Getting Started
+
+To run the project locally:
+
+1. **Clone the repository**  
+```bash
+git clone https://github.com/your-username/disease-prediction.git
+cd disease-prediction
+2. Install the dependencies
+
+
+
+pip install -r requirements.txt
+
+3. Add the required datasets to the data/ folder:
+
+heart.csv
+
+diabetes.csv
+
+breast_cancer.csv
+
+
+
+4. Run the main script
+
+
+
+python main.py
+
+Edit the main.py file to select which dataset to use:
+
+dataset = "heart"  # or "diabetes", or "breast_cancer"
+
+
+---
 
 📁 Project Structure
 
 disease-prediction/
-│
 ├── data/
-│   ├── heart.csv
-│   ├── diabetes.csv
-│   └── breast_cancer.csv
+│   ├── heart.csv                # Heart disease dataset
+│   ├── diabetes.csv             # Diabetes dataset
+│   └── breast_cancer.csv        # Breast cancer dataset
 │
 ├── models/
-│   ├── svm_model.py
-│   ├── logistic_regression.py
-│   ├── random_forest.py
-│   └── xgboost_model.py
+│   ├── svm_model.py             # Support Vector Machine implementation
+│   ├── logistic_regression.py  # Logistic Regression model
+│   ├── random_forest.py        # Random Forest model
+│   └── xgboost_model.py        # XGBoost model
 │
 ├── utils/
-│   └── preprocessing.py
+│   └── preprocessing.py         # Data loading and preparation
 │
-├── main.py
-├── requirements.txt
-└── README.md
-
----
-
-📝 README.md (Summary)
-
-# Disease Prediction from Medical Data
-
-This project uses machine learning classification algorithms to predict the presence of diseases based on medical datasets such as Heart Disease, Diabetes, and Breast Cancer from the UCI ML Repository.
-
-## 📌 Features
-- Uses structured medical data (age, symptoms, test results).
-- Algorithms: SVM, Logistic Regression, Random Forest, XGBoost.
-- Clean modular code using Python.
-
-## 📁 Datasets
-Place these in the `data/` directory:
-- Heart Disease
-- Diabetes
-- Breast Cancer
-
-## 🚀 How to Run
-1. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-
-2. Run main script:
-
-python main.py
-
-
-3. Edit main.py to switch datasets.
-
------
-
-🧪 Technologies Used
-
-Category	Technology
-
-Programming Language	Python 3
-Data Handling	Pandas
-Machine Learning	scikit-learn, XGBoost
-Algorithms	SVM, Logistic Regression, Random Forest, XGBoost
-Data Source	UCI Machine Learning Repository
-Development Environment	Jupyter Notebook / VS Code / Google Colab
-Version Control	Git & GitHub
-
-
-📊 Output
-
-Each model prints its accuracy score after training/testing.
-
-📚 Sources
-
-UCI Machine Learning Repository
+├── main.py                      # Run all models
+├── requirements.txt             # Project dependencies
+└── README.md                    # Project documentation
 
 
 ---
 
-        y = df["target"]
-    elif dataset_name == "diabetes":
-        df = pd.read_csv("data/diabetes.csv")
-        X = df.drop("Outcome", axis=1)
-        y = df["Outcome"]
-    elif dataset_name == "breast_cancer":
-        df = pd.read_csv("data/breast_cancer.csv")
-        X = df.drop("diagnosis", axis=1)
-        y = df["diagnosis"].map({"M": 1, "B": 0})
-    else:
-        raise ValueError("Invalid dataset name")
-    return X, y
+> 💡 by Shiva Teja
 
-
----
-
-📦 requirements.txt
-
-pandas
-scikit-learn
-xgboost
-----
