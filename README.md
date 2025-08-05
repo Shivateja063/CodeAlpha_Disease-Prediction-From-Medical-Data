@@ -74,4 +74,4 @@ Each model prints the accuracy score for the selected dataset after training and
 
 ---
 
-> Created with ❤️ by **Shiva Teja**
+> by **Shiva Teja**
