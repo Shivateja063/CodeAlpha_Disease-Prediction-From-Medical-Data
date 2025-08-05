@@ -1,93 +1,77 @@
 # 🧠 Disease Prediction from Medical Data
 
-A machine learning-based project that predicts the possibility of diseases such as Heart Disease, Diabetes, and Breast Cancer using structured patient data. Built using Python and classification algorithms like SVM, Logistic Regression, Random Forest, and XGBoost on datasets from the UCI Machine Learning Repository.
+**Author**: Shiva Teja
 
----
+This project applies machine learning classification algorithms to predict the likelihood of diseases using structured medical datasets such as Heart Disease, Diabetes, and Breast Cancer, sourced from the UCI Machine Learning Repository.
 
-## 📋 Features
+## 🎯 Objective
+Predict the presence or absence of diseases based on patient data such as symptoms, age, and test results using multiple classification techniques.
 
-- Predicts three types of diseases:
-  - Heart Disease
-  - Diabetes
-  - Breast Cancer
-- Uses real patient data from UCI Repository
-- Multiple ML models with comparison
-- Clean and modular code structure
-- Easily switch between datasets and models
-- Command-line runnable script
+## 🛠️ Features
+- Input data includes structured features like:
+  - Age, Symptoms
+  - Blood test results
+  - Medical history
+- Machine learning models used:
+  - Support Vector Machine (SVM)
+  - Logistic Regression
+  - Random Forest
+  - XGBoost
 
----
+## 📁 Datasets Used
+All datasets are publicly available from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/):
+- Heart Disease Dataset
+- Diabetes Dataset (PIMA Indian Diabetes)
+- Breast Cancer Wisconsin (Diagnostic)
 
-## 🛠️ Technologies Used
+Place these datasets inside the `data/` folder:
+```
+data/
+├── heart.csv
+├── diabetes.csv
+└── breast_cancer.csv
+```
 
-- **Python** – Core programming language
-- **Pandas** – Data manipulation
-- **Scikit-learn** – Machine learning models (SVM, Logistic Regression, Random Forest)
-- **XGBoost** – Advanced boosting classifier
-- **Jupyter / Google Colab / VS Code** – Development environments
+## 📦 Dependencies
+Install the required Python libraries using:
 
----
-
-## 🚀 Getting Started
-
-To run the project locally:
-
-1. **Clone the repository**  
 ```bash
-git clone https://github.com/your-username/disease-prediction.git
-cd disease-prediction
-2. Install the dependencies
-
-
-
 pip install -r requirements.txt
+```
 
-3. Add the required datasets to the data/ folder:
+Dependencies include:
+- `pandas`
+- `scikit-learn`
+- `xgboost`
 
-heart.csv
+## 🚀 How to Run
 
-diabetes.csv
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/disease-prediction.git
+   cd disease-prediction
+   ```
 
-breast_cancer.csv
+2. Place the datasets in the `data/` folder as shown above.
 
+3. Run the main script:
+   ```bash
+   python main.py
+   ```
 
+4. Edit `main.py` to choose the dataset:
+   ```python
+   dataset = "heart"  # or "diabetes", or "breast_cancer"
+   ```
 
-4. Run the main script
+## 📊 Output
+Each model prints the accuracy score for the selected dataset after training and testing.
 
-
-
-python main.py
-
-Edit the main.py file to select which dataset to use:
-
-dataset = "heart"  # or "diabetes", or "breast_cancer"
-
-
----
-
-📁 Project Structure
-
-disease-prediction/
-├── data/
-│   ├── heart.csv                # Heart disease dataset
-│   ├── diabetes.csv             # Diabetes dataset
-│   └── breast_cancer.csv        # Breast cancer dataset
-│
-├── models/
-│   ├── svm_model.py             # Support Vector Machine implementation
-│   ├── logistic_regression.py  # Logistic Regression model
-│   ├── random_forest.py        # Random Forest model
-│   └── xgboost_model.py        # XGBoost model
-│
-├── utils/
-│   └── preprocessing.py         # Data loading and preparation
-│
-├── main.py                      # Run all models
-├── requirements.txt             # Project dependencies
-└── README.md                    # Project documentation
-
+## 📚 References
+- [UCI ML Repository – Heart Disease](https://archive.ics.uci.edu/ml/datasets/Heart+Disease)
+- [UCI ML Repository – Diabetes](https://archive.ics.uci.edu/ml/datasets/pima+indians+diabetes)
+- [UCI ML Repository – Breast Cancer](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic))
 
 ---
 
-> 💡 by Shiva Teja
-
+> Created with ❤️ by **Shiva Teja**
